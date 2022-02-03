@@ -1,4 +1,4 @@
-import React, {useState, useEffect, useRef} from 'react'
+import React, {useState, useEffect} from 'react'
 import './MainArea.css'
 import {useDispatch, useSelector} from 'react-redux'
 import {v4 as uuidv4} from 'uuid'
@@ -26,13 +26,6 @@ export default function MainArea() {
     const dispatch = useDispatch()
 
     const [validation, setValidation] = useState(true)
-
-    const allInp = useRef([])
-    const addInp = el => {
-        if(el && !allInp.current.includes(el)) {
-            allInp.current.push(el)
-        }
-    }
 
     const updateInputs = e => {
         const actualInp = e.target.getAttribute('id')
@@ -114,7 +107,6 @@ export default function MainArea() {
               <input 
               value={inpModify.toggle ? inpModify.title : inpInfo.title}
               onChange={updateInputs}
-              ref={addInp}
               type="text" 
               id="title" />
 
@@ -124,17 +116,15 @@ export default function MainArea() {
 
               <label htmlFor="subtitle">Sous-titre</label>
               <input 
-              value={inpModify.toggle ? inpModify.subtitle : inpInfo.title}
+              value={inpModify.toggle ? inpModify.subtitle : inpInfo.subtitle}
               onChange={updateInputs}
-              ref={addInp}
               type="text" 
               id="subtitle" />
 
               <label htmlFor="txtbody">Votre Texte</label>
               <textarea
-              value={inpModify.toggle ? inpModify.body : inpInfo.title}
+              value={inpModify.toggle ? inpModify.body : inpInfo.body}
               onChange={updateInputs}
-              ref={addInp} 
               id="body" 
               placeholder='Votre texte...'></textarea>
 
