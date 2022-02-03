@@ -1,24 +1,32 @@
-import { v4 as uuidv4 } from "uuid";
+import { v4 as uuidv4 } from "uuid"
 
 const INITIAL_STATE = {
   notes: [
     {
       title: "Cuisine",
       subtitle: "Préparer un Osso buco",
-      body: "Preserved defective offending he daughters on or. Rejoiced prospect yet material servants out answered men admitted. Sportsmen certainty prevailed suspected am as. Add stairs admire all answer the nearer yet length. Advantages prosperous remarkably my inhabiting so reasonably be if. Too any appearance announcing impossible one. Out mrs means heart ham tears shall power every. ",
+      body: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe temporibus sapiente, rem nobis nostrum suscipit consectetur cum eum sed. Esse vitae fugiat delectus rerum voluptate, beatae iste molestiae optio enim, sequi architecto omnis aspernatur ipsum perspiciatis eius iure alias tempora modi obcaecati ad tenetur quos. Quod aliquam quis, quibusdam neque fuga quaerat sed laborum, esse ipsam quae, omnis libero eos!",
       id: uuidv4(),
     },
     {
       title: "Sport",
       subtitle: "Courir 10km",
-      body: "In to am attended desirous raptures declared diverted confined at. Collected instantly remaining up certainly to necessary as. Over walk dull into son boy door went new. At or happiness commanded daughters as. Is handsome an declared at received in extended vicinity subjects. Into miss on he over been late pain an. Only week bore boy what fat case left use. Match round scale now sex style far times. Your me past an much. ",
+      body: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi tenetur vero unde ab quas doloremque reiciendis eos a nostrum mollitia saepe, voluptatum sit ipsa maxime ipsum provident assumenda, ex quo.",
       id: uuidv4(),
     },
     {
       title: "Piano",
       subtitle: "Jouer l'Impromptu",
-      body: "Pasture he invited mr company shyness. But when shot real her. Chamber her observe visited removal six sending himself boy. At exquisite existence if an oh dependent excellent. Are gay head need down draw. Misery wonder enable mutual get set oppose the uneasy. End why melancholy estimating her had indulgence middletons. Say ferrars demands besides her address. Blind going you merit few fancy their. ",
+      body: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Id totam nostrum culpa perferendis distinctio laudantium quae sed dignissimos officiis ea, enim natus commodi provident? Et quidem ad quos rem, possimus fuga voluptate quasi laboriosam, sed enim autem sapiente sunt repellat.",
       id: uuidv4(),
     },
   ],
 };
+
+export default function notesReducer(state = INITIAL_STATE, action) {
+  switch(action.type) {
+
+  }
+
+  return state
+}
