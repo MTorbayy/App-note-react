@@ -26,6 +26,26 @@ const INITIAL_STATE = {
 export default function notesReducer(state = INITIAL_STATE, action) {
   switch(action.type) {
 
+
+    case "ADDNOTE": {
+
+      const newNotesArr = [...state.notes]
+      newNotesArr.push(action.payload)
+
+      return {
+        notes: newNotesArr
+      }
+    }
+    
+    case "DELETENOTE" : {
+      const newNotesArr = [...state.notes].filter(note => note.id !== action.payload)
+
+      // renvoie un tableau dont les éléments respectent tous la condition spécifiée
+
+      return ({
+        notes: newNotesArr
+      })
+    }
   }
 
   return state
