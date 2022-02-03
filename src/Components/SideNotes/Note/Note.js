@@ -26,10 +26,17 @@ export default function Note(props) {
     
   return (
   <li className="txt-note-prev">
+      <Link
+      to={{
+        pathname: `/displayNote/${props.title}`
+      }}
+      >
       <div className='bloc-note-left'>
           <p>{props.title}</p>
           <p>{props.subtitle}</p>
       </div>
+      </Link>
+
       <div className="bloc-note-right">
           <button
           onClick={deleteNote}
